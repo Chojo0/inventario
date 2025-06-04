@@ -2,6 +2,7 @@
 import express from 'express';
 import cors from 'cors';
 import categoriasRoutes from './routers/categorias.routes.js';
+import productosRoutes from './routers/productos.routes.js';
 
 /* asignamos a app toda la funcionalidad para el servidor web */
 const app = express();
@@ -17,6 +18,8 @@ app.use(express.json());
 
 /* Routers */
 app.use("/api/categorias", categoriasRoutes);
+app.use("/api/productos", productosRoutes);
+
 
 /* hacemos disponible a mi server app para todos los hosts */
 export default app;
