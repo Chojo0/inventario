@@ -20,6 +20,10 @@ app.use(express.json());
 app.use("/api/categorias", categoriasRoutes);
 app.use("/api/productos", productosRoutes);
 
+app.get('/', (req, res) => {
+	res.send('Hola desde el servidor web');
+});
+
 
 /* hacemos disponible a mi server app para todos los hosts */
 export default app;
