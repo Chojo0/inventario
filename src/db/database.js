@@ -1,16 +1,14 @@
-import mysql from 'promise-mysql';
-import config from '../config.js';
+import mysql from "mysql2/promise"; // Importa mysql2 en modo promesa
 
-const connection = mysql.createConnection({
-    host: config.host,
-    user: config.user,
-    password: config.password,
-    database: config.database
+import config from "./../config.js";
+
+const connection = await mysql.createConnection({
+  host: config.host,
+  database: config.database,
+  user: config.user,
+  password: config.password
 });
 
-const getConnection = () => {
-    return connection;
-};
-
+const getConnection = () => connection;
 
 export default getConnection;

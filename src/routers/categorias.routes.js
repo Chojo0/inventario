@@ -8,7 +8,7 @@ const router = Router();
 router.get('/', categoriaController.getCategorias);
 
 /* configuramos respuesta al POST desde el server */
-router.post('/', categoriaController.postCategoria);
+router.post('/', categoriaController.postCategorias);
 
 /* configuramos ruta para eliminar una categoria */
 router.delete('/:id', categoriaController.deleteCategory);
@@ -17,7 +17,7 @@ router.delete('/:id', categoriaController.deleteCategory);
 router.get('/:id', categoriaController.getCategory);
 
 /*ruta que recibe parametros del cuerpo del request */
-router.put('/:id', categoriaController.updateCategory);
+router.put('/:id', categoriaController.updateCategorias);
 
 /* hacemos disponible el router a la app */
 export default router;
